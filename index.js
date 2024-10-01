@@ -9,19 +9,8 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/"
-  //, async 
   , (req, res) => {
-//    try {
-//      const response = await axios.get("https://v2.jokeapi.dev/joke/any");
-//      const result = response.data;
       res.render("index.ejs");
-        //,{ data: result });
-//    } catch (error) {
-//      console.error("Failed to make request:", error.message);
-//     res.render("index.ejs", {
-//       error: error.message,
-//  });
-//    }
   });
 
 app.post("/", async (req, res) => {

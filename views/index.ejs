@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>LOL</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="form-title">L-o-Lz</h1>
+      <form action="/" class="form" method="POST">
+        <label for="personsName">Please type in your name:</label>
+        <input type="text" name="personsName" required>
+        <button type="submit" class="form-submit">Go</button>
+      </form>
+    <section>
+      <%if (locals.data) {%>
+        <article class="card-item">
+          <div class="card-info">
+            <h1 class="card-setup">
+                <%=data.setup%>
+            </h1>
+            <span class="card-delivery">
+                <%=data.delivery%>
+            </span>
+            <span class="card-joke">
+              <%=data.joke%>
+            </span>
+          </div>
+        </article>
+        <%}%>
+
+          <%if (locals.error) {%>
+            <div id="tag-error" class="tag-error">
+              <%=error%>
+            </div>
+            <%}%>
+    </section>
+  </div>
+
+
+</body>
+
+</html>
